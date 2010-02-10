@@ -1,6 +1,8 @@
+This is an FB Javascript library designed to extend the available methods available to Facebook canvas page applications. It is loosely based on the Prototype javascript library.
+
 This FBJS library has now been included in the Facebooker Ruby on Rails plugin. If you're using Facebooker then you already have this library (inside facebooker.js).
 
-Usage examples:
+Usage examples (View source to see more):
 
 Select Element
 $('noelement');
@@ -8,17 +10,14 @@ $('noelement');
 Select 2 Elements
 $('test1','test2');
 
+Select elements by name
+getElementsByClass('ename')
+
 Select elements by class
 getElementsByClass('test2c')
 
 Select elements by tag
 getElementsByTagName('strike')
-
-Use Javascript version of .map
-['a2','b2'].toSource() == map(['a','b'], function(val) { return val+2 }).toSource()
-
-Recurse through the dom under a selected element and return nodes for which test is true as an array
-collect($('test1'), function(element){ return (element.getClassName() == 'test2c') })
 
 Check if an element is visible
 $('test1').visible()
@@ -47,3 +46,12 @@ Load Remote
 Load: function(response_type, action_path, callbacks, post_parameters)
 (FBML/RAW/JSON)	
 Ajax.Load('JSON','http://...',{ success: function(result){console.log(result)} }, {'json':test_content})
+
+Pop up a confirmation Facebook dialog. Executes 'callback' if the user confirms.
+confirm("Confirm action?", "Do you really want to do this?", function() { doIt(); })
+
+Use Javascript version of .map
+['a2','b2'].toSource() == map(['a','b'], function(val) { return val+2 }).toSource()
+
+Recurse through the dom under a selected element and return nodes for which test is true as an array
+collect($('test1'), function(element){ return (element.getClassName() == 'test2c') })
