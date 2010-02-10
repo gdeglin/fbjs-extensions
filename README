@@ -1,3 +1,5 @@
+This FBJS library has now been included in the Facebooker Ruby on Rails plugin. If you're using Facebooker then you already have this library (inside facebooker.js).
+
 Usage examples:
 
 Select Element
