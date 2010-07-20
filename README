@@ -1,7 +1,5 @@
 This is an FB Javascript library designed to extend the available methods available to Facebook canvas page applications. It is loosely based on the Prototype javascript library.
 
-This FBJS library has now been included in the Facebooker Ruby on Rails plugin. If you're using Facebooker then you already have this library (inside facebooker.js).
-
 Usage examples (View source to see more):
 
 Select Element
